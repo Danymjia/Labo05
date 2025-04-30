@@ -3,21 +3,21 @@
 
 // Se usa la API publica de un centro de datos de la pandemia COVID19, los datos registrados solo van hasta el 7 de marzo del 2021
 
-// const urlApi = 'https://api.covidtracking.com/v1/us/daily.json';
+const urlApi = 'https://api.covidtracking.com/v1/us/daily.json';
 
-// (async function conectarCovidAPI() {
-//   try {
-//     const respuesta = await(await fetch(urlApi)).json();
-//     console.log('Respuesta exitosa de la API de COVID Tracking', respuesta);
-//     //Modificamos la respuesta de la API
-//     console.log(respuesta[0]) // mostrar los datos del primer día: ;
-//     // Podemos tambien iterar sobre los datos 
-//     respuesta.forEach(dia => console.log(dia.date, dia.positive)); //Muestra la fecha (yy-mm-dd) y los casos positivos covid en esa fecha por cada valor
+(async function conectarCovidAPI() {
+  try {
+    const respuesta = await(await fetch(urlApi)).json();
+    console.log('Respuesta exitosa de la API de COVID Tracking', respuesta);
+    //Modificamos la respuesta de la API
+    console.log(respuesta[0]) // mostrar los datos del primer día: ;
+    // Podemos tambien iterar sobre los datos 
+    respuesta.forEach(dia => console.log(dia.date, dia.positive)); //Muestra la fecha (yy-mm-dd) y los casos positivos covid en esa fecha por cada valor
 
-// } catch (error) {
-//     console.error('Error al conectar con la API', error);
-//   }
-// })();
+} catch (error) {
+    console.error('Error al conectar con la API', error);
+  }
+})();
 
 // ---------------------------------------------
 
